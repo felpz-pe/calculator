@@ -1,39 +1,30 @@
-document.getElementById('botao1').addEventListener('click', function(event){
-    event.preventDefault()
-    
-    var valor1 = parseInt(document.getElementById('nome1').value)
-    var valor2 = parseInt(document.getElementById('nome2').value)
-    var somaBotao = document.getElementById('soma')
-    var subtracaoBotao = document.getElementById('subtracao')
-    var multipBotao = document.getElementById('multip')
-    document.getElementById('display1').innerText = valor1
+function deleteValor(array){
+    let a = array.pop(array[array.length])
+    document.getElementById('output_bar').innerText = array.join("")
+    return array
+}
 
-    somaBotao.addEventListener('click', function(){
-        var valor1 = parseInt(document.getElementById('nome1').value)
-        var valor2 = parseInt(document.getElementById('nome2').value)
-        var resultadoSoma = valor1 + valor2
-        document.getElementById('display3').innerText = `a soma dos dois valores é ${resultadoSoma}`
-    })
+const teclado = [document.getElementById('tecla_1'),
+document.getElementById('tecla_2'), document.getElementById('tecla_3')
+]
 
-    subtracaoBotao.addEventListener('click', function(){
-        var valor1 = parseInt(document.getElementById('nome1').value)
-        var valor2 = parseInt(document.getElementById('nome2').value)
-        var resultadoSubtracao = valor1 - valor2
-        document.getElementById('display3').innerText = `a diferença dos dois valores é ${resultadoSubtracao}`
-    })
+var valor = [] 
 
-    multipBotao.addEventListener('click', function(){
-        var valor1 = parseInt(document.getElementById('nome1').value)
-        var valor2 = parseInt(document.getElementById('nome2').value)
-        var resultadoMultip = valor1 * valor2
-        document.getElementById('display3').innerText = `o produto dos dois valores é ${resultadoMultip}`
-    })
+teclado.forEach(macaco => 
+    macaco.addEventListener('click', function(){
+        event.preventDefault()
+        valor.push(teclado.indexOf(macaco) + 1)
+        document.getElementById('output_bar').innerText = valor.join("")
+        document.getElementById('tecla_limpar').addEventListener('click', function(){
+            deleteValor(valor)
+        })
+    }))
+
+
+document.getElementById('tecla_apagar').addEventListener('click', function(){
+    deleteValor(valor)
 })
 
-document.getElementById('botao2').addEventListener('click', function(event){
-    event.preventDefault()
-    var valor2 = parseInt(document.getElementById('nome2').value)
-
-    document.getElementById('display2').innerText = valor2
-})
-
+/*document.getElementById('soma').addEventListener('click', function(){
+    document.getElementById('output_bar').innerText + '+'   
+})*/
