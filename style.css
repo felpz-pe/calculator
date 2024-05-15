@@ -1,11 +1,40 @@
-.a {
+#output_bar {
     background-color: rgb(238, 238, 238);
-    display: inline-block;
-    overflow: hidden;
+    display: inline;
+    float: left;
+    overflow: visible;
     border-radius: 5px;
     height: 14px;
-    width: 140px;
+    width: 113px;
+    border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 2px;
+}
+
+#result {
+    background-color: rgb(238, 238, 238);
+    display: inline;
+    float: left;
+    clear: left;
+    overflow: visible;
+    border-radius: 5px;
+    height: 14px;
+    width: 136px;
     border: 1px solid black;
     padding: 4px;
     margin-bottom: 5px;
+}
+
+
+#operat {
+    background-color: rgb(238, 238, 238);
+    display: inline;
+    float: left;
+    overflow: visible;
+    border-radius: 5px;
+    height: 14px;
+    width: 10px;
+    border: 1px solid black;
+    padding: 4px;
+    margin: 0px 3px 5px 3px;
 }
