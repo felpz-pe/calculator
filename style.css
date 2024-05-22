@@ -1,4 +1,4 @@
-#output_bar {
+.output_bar {
     background-color: rgb(238, 238, 238);
     display: inline;
     float: left;
@@ -11,7 +11,7 @@
     margin-bottom: 2px;
 }
 
-#result {
+.result {
     background-color: rgb(238, 238, 238);
     display: inline;
     float: left;
@@ -26,7 +26,7 @@
 }
 
 
-#operat {
+.operat {
     background-color: rgb(238, 238, 238);
     display: inline;
     float: left;
@@ -37,4 +37,8 @@
     border: 1px solid black;
     padding: 4px;
     margin: 0px 3px 5px 3px;
+}
+
+.teclado button {
+    margin: 2px 0px;
 }

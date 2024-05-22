@@ -2,45 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <!-- <form>
-            <label for="nome1">Digite o 1. valor:</label>
-            <input type="text" value="" id="nome1"/>
-            <a id="botao1" href="#">Confirmar</a>
-        </form>
-        <form>
-            <label for="nome2">Digite o 2. valor:</label>
-            <input type="text" value="" id="nome2"/>
-            <a id="botao2" href="#">Confirmar</a>
-        </form> -->
+    <div class="output_bar"></div>
+    <div class="operat"></div>
     </div>
-        <div id="output_bar"></div>
-        <div id="operat"></div>
-        </div>
-        <div id="result"></div><br><br>
+    <div class="result"></div><br><br>
     </div><br><br>
-    <div>
-        <button id="tecla_1">1</button>
-        <button id="tecla_2">2</button>
-        <button id="tecla_3">3</button>
-        <button id="tecla_apagar">del</button>
-        <button id="tecla_limpar">C</button><br>
-        <button id="resultado">=</button>
+    <div class="teclado">
+        <button class="tecla_1">1</button>
+        <button class="tecla_2">2</button>
+        <button class="tecla_3">3</button>
+        <button class="tecla_limpar">C</button><br>
+        <button class="tecla_4">4</button>
+        <button class="tecla_5">5</button>
+        <button class="tecla_6">6</button>
+        <button class="tecla_apagar">del</button><br>
+        <button class="tecla_7">7</button>
+        <button class="tecla_8">8</button>
+        <button class="tecla_9">9</button>
+        <button class="tecla_0">0</button><br>
+        <button class="resultado">=</button>
     </div><br>
     <div>
-        Escolha uma operação:<br>
-        <button id="soma">+</button>
-        <button id="subtracao">-</button>
-        <button id="multip">x</button>
+        <button class="soma" class="math">+</button>
+        <button class="subtracao" class="math">-</button>
+        <button class="multip" class="math">x</button>
+        <!-- <button class="split" class="math">/</button>
+        <button class="potential" class="math">^</button>
+        <button class="percentage" class="math">%</button> -->
     </div>
-    <div id="display1"></div>
-    <div id="display2"></div>
-    <div id="display3"></div>
+    <div class="display1"></div>
+    <div class="display2"></div>
+    <div class="display3"></div>
     <script src="javascript.js"></script>
 </body>
 </html>
