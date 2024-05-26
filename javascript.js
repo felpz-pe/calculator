@@ -23,7 +23,11 @@ document.querySelector('.tecla_limpar').addEventListener('click', function(){
 teclado.forEach(macaco => 
     macaco.addEventListener('click', function(){
         event.preventDefault()
-        valor1.push(teclado.indexOf(macaco) + 1)
+        if (teclado.indexOf(macaco) === 9){
+            valor1.push(0)
+        } else {
+            valor1.push(teclado.indexOf(macaco) + 1)
+        }
         document.querySelector('.output_bar').innerText = valor1.join("")
         console.log(document.querySelector('.output_bar').innerText)
 }))
@@ -31,7 +35,6 @@ teclado.forEach(macaco =>
 document.querySelector('.tecla_apagar').addEventListener('click', function(){
     deleteValor(valor1)
 })
-
 
 document.querySelector('.soma').addEventListener('click', function(){
     document.querySelector('.operat').innerText = '+'
@@ -63,6 +66,35 @@ document.querySelector('.multip').addEventListener('click', function(){
     document.querySelector('.result').innerText = num1
 })
 
+document.querySelector('.split').addEventListener('click', function(){
+    document.querySelector('.operat').innerText = '/'
+    num1 = parseInt(valor1.join(""))
+    console.log(num1)
+    valor1 = []
+    document.querySelector('.output_bar').innerText = valor1.join("")
+    console.log(valor1[0])
+    document.querySelector('.result').innerText = num1
+})
+
+document.querySelector('.potential').addEventListener('click', function(){
+    document.querySelector('.operat').innerText = '^'
+    num1 = parseInt(valor1.join(""))
+    console.log(num1)
+    valor1 = []
+    document.querySelector('.output_bar').innerText = valor1.join("")
+    console.log(valor1[0])
+    document.querySelector('.result').innerText = num1
+})
+
+document.querySelector('.percentage').addEventListener('click', function(){
+    document.querySelector('.operat').innerText = '%'
+    num1 = parseInt(valor1.join(""))
+    console.log(num1)
+    valor1 = []
+    document.querySelector('.output_bar').innerText = valor1.join("")
+    console.log(valor1[0])
+    document.querySelector('.result').innerText = num1
+})
 
 document.querySelector('.resultado').addEventListener('click', function(){
     event.preventDefault()
@@ -78,6 +110,15 @@ document.querySelector('.resultado').addEventListener('click', function(){
     } else if (document.querySelector('.operat').innerText === 'x'){
         result = num1 * num2
         document.querySelector('.result').innerText = `${num1} x ${num2} = ${result}`
+    } else if (document.querySelector('.operat').innerText === '/'){
+        result = num1 / num2
+        document.querySelector('.result').innerText = `${num1} / ${num2} = ${result}`
+    } else if (document.querySelector('.operat').innerText === '^'){
+        result = num1 ** num2
+        document.querySelector('.result').innerText = `${num1} ^ ${num2} = ${result}`
+    } else if (document.querySelector('.operat').innerText === '%'){
+        result = (num2 / 100) * num1
+        document.querySelector('.result').innerText = `${num1}% x ${num2} = ${result}`
     }
     
     
